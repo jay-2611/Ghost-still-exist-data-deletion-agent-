@@ -190,18 +190,3 @@ hackerrank-orchestrate-october26/
 - **Replica detection**: Snapshot timestamps are compared across SQL files to detect replication drift, but multi-region consistency guarantees are not modelled.
 - **Policy hypotheses**: Some "must retain" claims (e.g., audit logs within retention period) cannot be fully proved from the public evidence set; the agent assumes worst-case (retain) for safety.
 
----
-
-## Submission
-
-**Challenge page**: https://wwww.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists
-
-The submission ZIP (`code.zip`) must contain:
-- `code/` directory (all Python source files)
-- `README.md`
-- `requirements.txt`
-- `.env.example`
-- `evaluation/evaluation_report.md`
-- `evaluation/usage_report.md`
-
-Do **not** include: `dataset/`, `.cache/`, `.venv/`, `output.csv`, `.env`, `log.txt`, or nested archives.
