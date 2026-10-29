@@ -1,0 +1,72 @@
+[
+  {
+    "id": "perturb_old_email_only_case10",
+    "group": "sample_perturbation",
+    "base_case_id": "case_10",
+    "perturbation": {
+      "request_email": "nadia.ionescu@yahoo.com",
+      "identity_mode": "historical_email_only"
+    },
+    "email": "nadia.ionescu@yahoo.com",
+    "request_text": "I used this Yahoo address before changing the email on my account. Please remove records linked to both the old and current addresses.",
+    "expected": "COMPLETE_OR_INCOMPLETE_DELETION",
+    "expected_result": {
+      "identity_user_ids": ["user_10"],
+      "deletion_status": "INCOMPLETE",
+      "finding": ["support_002", "REPORT_REMAINING_RECORD"]
+    }
+  },
+  {
+    "id": "perturb_flow_disabled_case11",
+    "group": "sample_perturbation",
+    "base_case_id": "case_11",
+    "perturbation": {
+      "resource_id": "data_flow_9522",
+      "from_state": "ACTIVE",
+      "to_state": "DISABLED"
+    },
+    "request_text": "I would like the account associated with this address to be erased. Please handle any copies that fall within the scope of the deletion request. Please contact me if you need information to verify the request.",
+    "expected": "COMPLETE_OR_INCOMPLETE_DELETION",
+    "expected_result": {
+      "deletion_status": "INCOMPLETE",
+      "flow_finding": false,
+      "flow_remediation": false,
+      "flow_verification": "VERIFY_DATA_FLOW_DISABLED",
+      "other_findings_remain": ["search_052", "analytics_2034", "support_864"]
+    }
+  },
+  {
+    "id": "perturb_missing_system_snapshot_case05",
+    "group": "sample_perturbation",
+    "base_case_id": "case_05",
+    "perturbation": {
+      "remove_snapshot_scope_for_system": "account_service",
+      "retain_positive_replica_observation": "account_005"
+    },
+    "request_text": "I deleted this account and received a confirmation, but the same email address is still recognized. Please remove any remaining copy of my profile.",
+    "expected": "COMPLETE_OR_INCOMPLETE_DELETION",
+    "expected_result": {
+      "deletion_status": "INCOMPLETE",
+      "resource_state": "PRESENT",
+      "finding": ["account_005", "REPORT_REMAINING_RECORD"],
+      "must_not_infer_absence_from_missing_scope": true
+    }
+  },
+  {
+    "id": "perturb_tombstone_phone_case32",
+    "group": "sample_perturbation",
+    "base_case_id": "case_32",
+    "perturbation": {
+      "resource_id": "tombstone_9178",
+      "add_direct_identifier": "phone"
+    },
+    "request_text": "The account itself is gone, but an internal deleted-account record still shows my personal details. Please keep only the reference needed for retained records and remove the rest.",
+    "expected": "COMPLETE_OR_INCOMPLETE_DELETION",
+    "expected_result": {
+      "deletion_status": "INCOMPLETE",
+      "finding": ["tombstone_9178", "REPORT_EXPOSED_PII"],
+      "remediation": ["tombstone_9178", "REDACT_RECORD"],
+      "verification": ["tombstone_9178", "VERIFY_RECORD_REDACTED"]
+    }
+  }
+]

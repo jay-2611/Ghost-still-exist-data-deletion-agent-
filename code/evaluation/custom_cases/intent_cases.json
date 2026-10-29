@@ -1,0 +1,122 @@
+[
+  {
+    "id": "nondeletion_01",
+    "group": "explicit_non_deletion",
+    "request_text": "The mobile number on my profile is out of date. Please replace it with the new one and leave the account active.",
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "nondeletion_02",
+    "group": "explicit_non_deletion",
+    "request_text": "Please stop the promotional emails. I still need the account and my order history, so I am not asking for deletion.",
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "nondeletion_03",
+    "group": "explicit_non_deletion",
+    "request_text": "I'd like to download my account information in a portable format. Please keep the account as it is.",
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "nondeletion_04",
+    "group": "explicit_non_deletion",
+    "request_text": "I can't access my profile and need help resetting the login. Do not close the account.",
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "nondeletion_05",
+    "group": "explicit_non_deletion",
+    "request_text": "My surname is misspelled on the account. Can you correct it without removing any of my records?",
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "nondeletion_06",
+    "group": "explicit_non_deletion",
+    "request_text": "Please remove me from marketing lists only. I still want receipts and service messages for this account.",
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "nondeletion_07",
+    "group": "explicit_non_deletion",
+    "request_text": "Can you tell me what personal information you hold about me? This is an information request, not a request to erase it.",
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "nondeletion_08",
+    "group": "explicit_non_deletion",
+    "request_text": "I need a copy of last year's invoices for my records. Please leave my profile and purchase history in place.",
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "nondeletion_09",
+    "group": "explicit_non_deletion",
+    "request_text": "Please change the email address used for this account. I want to continue using the service.",
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "nondeletion_10",
+    "group": "explicit_non_deletion",
+    "request_text": "Could you send me a copy of the information held on my account? I still use it, so please don't delete or change anything.",
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "deletion_variant_01",
+    "group": "deletion_variant",
+    "request_text": "I am asking you to remove my account and the personal information linked to it. Please process deletion across covered systems.",
+    "expected": "COMPLETE_OR_INCOMPLETE_DELETION"
+  },
+  {
+    "id": "deletion_variant_02",
+    "group": "deletion_variant",
+    "request_text": "Please close my account and permanently delete its associated personal data. Please confirm when complete.",
+    "expected": "COMPLETE_OR_INCOMPLETE_DELETION"
+  },
+  {
+    "id": "deletion_variant_03",
+    "group": "deletion_variant",
+    "request_text": "I want to close this account permanently and erase the personal data linked to it.",
+    "expected": "COMPLETE_OR_INCOMPLETE_DELETION"
+  },
+  {
+    "id": "deletion_variant_04",
+    "group": "deletion_variant",
+    "request_text": "Please remove my profile and delete my personal details from earlier support conversations.",
+    "expected": "COMPLETE_OR_INCOMPLETE_DELETION"
+  },
+  {
+    "id": "deletion_variant_05",
+    "group": "deletion_variant",
+    "request_text": "Please erase the account linked to this email address and all in-scope personal data.",
+    "expected": "COMPLETE_OR_INCOMPLETE_DELETION"
+  },
+  {
+    "id": "negation_01",
+    "group": "negation",
+    "request_text": "I am not asking for deletion. Please only correct the spelling of my surname.",
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "negation_02",
+    "group": "negation",
+    "request_text": "Do not close my account; I want to keep using the service.",
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "negation_03",
+    "group": "negation",
+    "request_text": "No solicito la eliminación de mi cuenta; solo quiero cambiar el número de teléfono.",
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "negation_04",
+    "group": "negation",
+    "request_text": "Je ne demande pas la suppression de mon compte; veuillez seulement corriger mon adresse e-mail.",
+    "expected": "NOT_APPLICABLE"
+  },
+  {
+    "id": "negation_05",
+    "group": "negation",
+    "request_text": "삭제를 요청하는 것이 아닙니다. 계정은 그대로 두고 이메일 주소만 변경해 주세요.",
+    "expected": "NOT_APPLICABLE"
+  }
+]
